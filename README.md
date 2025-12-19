@@ -17,9 +17,14 @@ An exploding die is a fair die where:
 ### Analysis Reports
 - **`EXPLODING_DICE_ANALYSIS.md`** - Complete analysis of single exploding dice
 - **`TWO_DICE_ANALYSIS.md`** - Analysis of maximum-of-two-dice mechanic
+- **`MATHEMATICAL_CHARACTERIZATION.md`** - Formal mathematical analysis (die size vs target)
+- **`GAME_DESIGN_GUIDE.md`** - **NEW!** Complete guide for all target values (T = 1-25)
+- **`COMPLETE_ANALYSIS_SUMMARY.md`** - Executive summary of all analyses
 
 ### Code
 - **`exploding_dice.py`** - Python implementation with exact probability calculations
+- **`mathematical_analysis.py`** - Advanced mathematical characterization
+- **`target_value_analysis.py`** - **NEW!** Complete target value analysis (all positive integers)
 
 ### Visualizations
 #### Single Die Analysis:
@@ -29,6 +34,14 @@ An exploding die is a fair die where:
 #### Two Dice Analysis:
 - **`two_dice_probabilities.png`** - Triple-panel visualization (bars + lines + marginal improvements)
 - **`two_dice_heatmap.png`** - Probability heatmap for dice pairings
+
+#### Mathematical Characterization:
+- **`mathematical_analysis.png`** - 8-panel comprehensive analysis
+- **`probability_surface_3d.png`** - 3D surface plot (die size × target)
+
+#### Target Value Analysis:
+- **`target_value_analysis.png`** - **NEW!** 7-panel analysis of all targets T = 1-25
+- **`game_design_guide.png`** - **NEW!** Practical quick reference for designers
 
 ## 🎯 Quick Results
 
@@ -59,6 +72,25 @@ An exploding die is a fair die where:
 | d6+d12    | 87.5%  | 65.3%  | 49.8%  | 31.3%  |
 
 **Key Insight**: Two dice dramatically improve success rates (nearly double for many targets)!
+
+### Part 3: Complete Target Analysis (NEW!)
+
+**All positive integer targets (T = 1-25) for fixed dice pairings:**
+
+**Key Target Thresholds (d6+d12):**
+- **T ≤ 3**: Trivial (>90% success)
+- **T = 4-7**: Easy (66-94% success)
+- **T = 8-10**: Medium (31-58% success)
+- **T = 11-13**: Hard (11-31% success)
+- **T = 14-18**: Very Hard (5-11% success)
+- **T ≥ 19**: Nearly Impossible (<5% success)
+
+**Steep Regions (High Sensitivity):**
+- **T = 2-7**: Large probability changes (10-25pp per target)
+- **T = 8-12**: Moderate changes (5-10pp per target)
+- **T > 15**: Minimal changes (<1pp per target)
+
+**Key Insight**: Monotonic decay, smooth curves, clear difficulty bands!
 
 ## 💡 Major Findings
 
